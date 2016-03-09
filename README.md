@@ -27,6 +27,7 @@
 - Repositorio de curso Java: https://github.com/gcoronelc/CEPSUNI_JAVA_OO_002
 - Repositorio de curso Java: https://github.com/gcoronelc/CEPSUNI_JAVA_OO_001
 - Curso virtual de Java: https://www.edx.org/course/programacion-orientada-objetos-mexicox-upevipn02x
+- Video motivacional: https://www.youtube.com/watch?v=0FdVAhfrW44
 
 
 # Clase 01
