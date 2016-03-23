@@ -7,3 +7,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /Sem02/AprendiendoWeb2/dist/
+/Sem03/PagoApp/nbproject/private/
+/Sem03/PagoApp/build/
+/Sem03/PagoApp/dist/
