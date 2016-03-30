@@ -1,4 +1,5 @@
 ![INGENIERIA DE SOFTWARE III](https://raw.githubusercontent.com/gcoronelc/UCH_INGSOFT3_001/master/logo.png)
+![INGENIERIA DE SOFTWARE III](https://raw.githubusercontent.com/gcoronelc/UCH_INGSOFT3_001/master/promocion.jpg)
 
 # INGENIERIA DE SOFTWARE III
 
