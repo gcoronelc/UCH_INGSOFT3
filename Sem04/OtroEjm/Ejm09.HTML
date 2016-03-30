@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+	<TITLE>Ejemplo de uso de Switch</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="blue" TEXT="white">
+<H1>
+	<SCRIPT LANGUAGE=javascript TYPE="text/javascript">
+	document.write( "Ingreso al Sistema<BR>");
+	usuario = prompt("Por favor, identifiquese: ","invitado");
+	switch (usuario.toUpperCase()) {
+		case "ADMINISTRADOR": 
+			document.write("Bienvenido Administrador...<BR>");
+			break;
+		case "OPERADOR": 
+			document.write("Bienvenido Operador...<BR>");
+			break;
+ 		case "INVITADO": 
+			document.write("Bienvenido Invitado...<BR>");
+			break;
+		default: 
+			document.write("No estás autorizado...<BR>");
+			break;
+	}			  				  				  
+	document.write("Fin del proceso.")	
+	</SCRIPT>	
+</H1>	
+</BODY>
+</HTML>

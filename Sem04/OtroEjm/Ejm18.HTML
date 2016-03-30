@@ -1,0 +1,35 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function sumar()
+	{
+	  resul = 0;
+	  for(i=0; i < arguments.length; i++) 
+	  {
+		resul += arguments[i];
+	  }
+	  return resul;
+	}
+//-->
+</SCRIPT>
+
+<BODY>
+
+	<FORM NAME="Form1" METHOD=POST ACTION="">
+	  n1:<INPUT TYPE="text" NAME="n1"><BR>
+	  n1:<INPUT TYPE="text" NAME="n2"><BR>
+	  n1:<INPUT TYPE="text" NAME="n3"><BR>
+	  Suma:<INPUT TYPE="text" NAME="suma" disabled><BR>
+	  <INPUT TYPE="button" value="Verificar" 
+		onclick="Form1.suma.value=sumar(Number(Form1.n1.value),
+		Number(Form1.n2.value),Number(Form1.n3.value))">
+	</FORM>
+
+</BODY>
+
+</HTML>

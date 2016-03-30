@@ -1,0 +1,33 @@
+<HTML>
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function validar()
+    {
+      campos="";
+      if (Form1.nombre.value == "") {
+	      campos="Nombre";
+	    }
+  	  if (Form1.email.value.indexOf("@") == -1) {
+	      if (campos==""){campos="Email";}
+        else{campos = campos + ", Email";}
+	    }
+      if (campos==""){return true;}
+      else{
+        msg = "Datos no son correctos: " + campos;
+        alert(msg);
+        return false;
+      }
+    }
+  //-->
+  </SCRIPT>
+	</HEAD>
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="alfa.asp" onSubmit="return validar()">
+  Nombre:<INPUT TYPE="text" NAME="nombre" ><BR>
+  Email:<INPUT TYPE="text" NAME="email" ><BR>
+  <INPUT TYPE="submit" name="enviar" value="Enviar Datos">
+</FORM>
+</BODY>
+</HTML>

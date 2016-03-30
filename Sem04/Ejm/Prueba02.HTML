@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+	<SCRIPT LANGUAGE="JScript">
+	function singOut ()  {
+		var elMomento = new Date();
+		var laHora = elMomento.getHours();
+		var elMinuto = elMomento.getMinutes();
+		var elDesplazamiento = (elMomento.getTimezoneOffset() / 60);
+
+		laHora -= elDesplazamiento;
+		if (laHora > 23)  {
+			laHora -= 24
+		}
+		window.alert(laHora + " horas, " + elMinuto + " minutos, Horario Universal Coordinado.");
+		window.setTimeout("singOut();", 60000);
+	}
+	</SCRIPT>
+</HEAD>
+<BODY>
+	<SCRIPT>
+		singOut();
+	</SCRIPT>
+</BODY>
+</HTML>

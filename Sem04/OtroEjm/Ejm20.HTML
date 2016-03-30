@@ -1,0 +1,16 @@
+<HTML>
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+	</HEAD>
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="">
+  Numero:<INPUT TYPE="text" NAME="num"><BR>
+  Round:<INPUT TYPE="text" NAME="res1" disabled><BR>
+  Ceil:<INPUT TYPE="text" NAME="res2" disabled><BR>
+  <INPUT TYPE="button" value="Round" 
+    onclick="Form1.res1.value=Math.round(Form1.num.value)">
+  <INPUT TYPE="button" value="Ceil" 
+    onclick="Form1.res2.value=Math.ceil(parseFloat(Form1.num.value))">
+</FORM>
+</BODY>
+</HTML>
