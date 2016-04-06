@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Indice</TITLE>
+</HEAD>
+<script language="JavaScript">
+<!--
+
+  function destino( url ){
+    top.frames['contenido'].location.href = url;
+    //window.location.href = url;
+  }
+//-->
+</script>
+<BODY BGCOLOR=#C0C0C0>
+<FORM METHOD=POST ACTION="" name="Form1">
+  <SELECT NAME="lista">
+    <option value=Ejm01.html>Ejm01</option>
+    <option value=Ejm02.html>Ejm02</option>
+    <option value=Ejm03.html>Ejm03</option>
+    <option value=Ejm04.html>Ejm04</option>
+  </SELECT>
+  <INPUT TYPE="button" value="Ir a.."	onClick="destino(Form1.lista.options[Form1.lista.selectedIndex].value)"/>
+</FORM>
+</BODY>
+</HTML>
+
+
+  
+

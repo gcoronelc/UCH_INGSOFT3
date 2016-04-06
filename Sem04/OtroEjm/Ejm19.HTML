@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function GetFecha()
+    {
+      fecha = new Date();
+      Form1.dia.value = fecha.getDate();
+      Form1.mes.value = fecha.getMonth() + 1;
+      Form1.anno.value = fecha.getYear();
+    }
+  //-->
+  </SCRIPT>
+	</HEAD>
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="">
+  Dia:<INPUT TYPE="text" NAME="dia" disabled><BR>
+  Mes:<INPUT TYPE="text" NAME="mes" disabled><BR>
+  Año:<INPUT TYPE="text" NAME="anno" disabled><BR>
+  <INPUT TYPE="button" value="Obtener Fecha" 
+    onclick="GetFecha()">
+</FORM>
+</BODY>
+</HTML>

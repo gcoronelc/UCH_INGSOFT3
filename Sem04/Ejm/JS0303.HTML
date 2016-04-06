@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+	<TITLE>Función</TITLE>
+	<SCRIPT LANGUAGE ="JavaScript">
+	<!-- Inicio
+	var subvent ;
+	function SubWin( loc, titulo, ancho, alto )
+	{
+		var options;
+		options="toolbar=0,status=1,menubar=0,scrollbars=1," +
+			"resizable=1,location=0,directories=0,width=" +
+			ancho + ",height=" + alto;
+		subvent=open(loc,titulo,options);
+	}
+	// Fin -->
+	</SCRIPT>
+</HEAD>
+<BODY>
+<Form name=subform>
+	<H1>Datos de la Nueva Ventana</H1>
+	<BR>Dirección<input name=loc value="http://master/egcc/clientes.asp">
+	<BR>Titulo<input name=tit value="EGCC">
+	<BR>Ancho<input name=wid value=200>
+	<BR>Altura<input name=hei value=200>
+	
+	<BR><input value="Abrir Sub-Ventana" type=button
+		onClick="SubWin(document.subform.loc.value,
+		document.subform.tit.value,
+		document.subform.wid.value,
+		document.subform.hei.value)">
+	
+	<input value="Cerrar" type=button onClick="subvent.close()">
+
+</Form>
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>Manejando Eventos</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- Inicio
+
+  function confirmar_reset(){
+     return confirm("¿ Deseas Limpiar el formulario... ?");
+  } 
+
+  function confirmar_submit(){
+     return confirm("¿ Deseas enviar el formulario... ?");
+  } 
+
+  function aMayusculas(campo){
+     campo.value=campo.value.toUpperCase();
+  }
+
+  function cambiaEstado(texto){
+     window.status=texto;
+  }
+
+  function compruebaCodigo(campo){ 
+     if (isNaN(campo.value)||(campo.value.length<5)){
+        alert("Debe introducir\nun código numérico\nde 5 cifras");
+        campo.focus();
+        campo.select();
+     }
+  }
+
+// Fin -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<CENTER>
+<H1>Manejando Eventos</H1>
+<FORM NAME="miFormulario" onSubmit="return confirmar_submit()" 
+                          onReset="return confirmar_reset()">
+<P><B>Por favor introduzca los siguientes datos:</B></P>
+<TABLE>
+<TR>
+  <TD ALIGN=RIGHT>Nombre:</TD>
+  <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="nombre" SIZE=10
+                        onFocus="cambiaEstado('Nombre...')"
+                        onChange="aMayusculas(this)"></TD>
+</TR>
+<TR>
+  <TD ALIGN=RIGHT>Apellidos:</TD>
+  <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="apellidos" SIZE=30
+                        onFocus="cambiaEstado('Apellidos...')"
+                        onChange="aMayusculas(this)"></TD>
+</TR>
+<TR><TD ALIGN=CENTER COLSPAN=4><HR></TD></TR>
+<TR>
+   <TD ALIGN=RIGHT>Dirección:</TD>
+   <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="calle" SIZE=30
+                        onFocus="cambiaEstado('Dirección habitual...')"
+                        onChange="aMayusculas(this)"></TD>
+</TR>
+<TR>
+   <TD ALIGN=RIGHT>Ciudad:</TD>
+   <TD ALIGN=LEFT><INPUT TYPE="TEXT" NAME="ciudad" SIZE=10
+                        onFocus="cambiaEstado('Ciudad de residencia...')"
+                        onChange="aMayusculas(this)"></TD>
+   <TD ALIGN=RIGHT>Cod.Postal:</TD>
+   <TD ALIGN=LEFT><INPUT TYPE="TEXT" NAME="codigo" SIZE=5 MAXLENGTH=5 
+                        onFocus="cambiaEstado('Código postal de su ciudad...')"
+                        onBlur="compruebaCodigo(this)"></TD>
+</TR>
+</TABLE><BR>
+<INPUT TYPE="SUBMIT" VALUE="Enviar" onMouseOver="this.value='Enviar el formulario'"
+                                    onMouseOut="this.value='Enviar'">
+<INPUT TYPE="RESET" VALUE="Limpiar" onMouseOver="this.value='Limpiar el formulario'"
+                                    onMouseOut="this.value='Limpiar'">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

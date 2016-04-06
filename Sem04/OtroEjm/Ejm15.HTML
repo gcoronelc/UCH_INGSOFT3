@@ -1,0 +1,31 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function isInt( cadena )
+    {
+      n = parseInt(cadena);
+      if (isNaN( parseInt(cadena) ) ) {
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+  //-->
+</SCRIPT>
+
+<BODY>
+	<FORM NAME="Form1" METHOD=POST ACTION="">
+	  Entero:<INPUT TYPE="text" NAME="cad"><BR>
+	  Resultado:<INPUT TYPE="text" NAME="res" disabled><BR>
+	  <INPUT TYPE="button" value="Verificar" 
+	  onclick="Form1.res.value=isInt(Form1.cad.value)">
+	</FORM>
+</BODY>
+
+</HTML>

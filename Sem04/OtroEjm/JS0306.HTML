@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+	<TITLE>Objeto Math</TITLE>
+	<SCRIPT LANGUAGE ="JavaScript">
+	<!-- Inicio
+	function CalculaEcuacion()
+	{
+		var a, b, c, x;
+		a = parseFloat(document.MiForm.a.value);
+		b = parseFloat(document.MiForm.b.value);
+		c = parseFloat(document.MiForm.c.value);
+		x = (-b + Math.sqrt(Math.pow(b,2) - (4*a*c)))/(2*a);
+		document.MiForm.x1.value = x
+		x = (-b - Math.sqrt(Math.pow(b,2) - (4*a*c)))/(2*a);
+		document.MiForm.x2.value = x
+	}
+	// Fin -->
+	</SCRIPT>
+</HEAD>
+<BODY>
+<Center>
+	<H3>Objeto Math</H3>
+	<FORM Name="MiForm">
+	<B>Introdusca los coeficientes de la</B><BR>
+	<B>siguiente ecuación de 2º grado:</B><BR><BR>
+	<Input Type=Text Name="a" Size=3 MaxLength=3> X² + 
+	<Input Type=Text Name="b" Size=3 MaxLength=3> X + 
+	<Input Type=Text Name="c" Size=3 MaxLength=3> = 0 <BR><BR>
+	 
+	<B>Las soluciones son: </B><BR><BR>
+
+	x = <Input Type=Text Name="x1" Size=5 MaxLength=3> ó
+	x = <Input Type=Text Name="x2" Size=5 MaxLength=3> <BR><BR>
+
+	<Input Type=Button Value="Solucionar" Name="miBoton"
+		onClick="CalculaEcuacion()">
+	</FORM>
+</Center>
+</BODY>
+</HTML>

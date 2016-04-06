@@ -1,0 +1,24 @@
+<HTML>
+
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function cuadrado( numero )
+	{
+		return numero * numero;
+	}
+	//-->
+	</SCRIPT>
+	</HEAD>
+
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="">
+	Numero:<INPUT TYPE="text" NAME="numero"><BR>
+	Resultado:<INPUT TYPE="text" NAME="resultado" disabled><BR>
+	<INPUT TYPE="button" value="Calcular" 
+	onclick="Form1.resultado.value=cuadrado(Form1.numero.value)">
+</FORM>
+</BODY>
+</HTML>

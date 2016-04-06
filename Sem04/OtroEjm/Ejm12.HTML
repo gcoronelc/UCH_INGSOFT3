@@ -1,0 +1,27 @@
+<HTML>
+
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+	</HEAD>
+
+<BODY>
+
+<FORM NAME="Form1" METHOD=POST ACTION="">
+  cadena:<INPUT TYPE="text" NAME="cad"><BR>
+  numero:<INPUT TYPE="text" NAME="num" disabled><BR>
+  <INPUT TYPE="button" value="Calcular" 
+  onclick="Form1.num.value=parseInt(Form1.cad.value)">
+</FORM>
+
+<hr width=3>
+
+<FORM NAME="Form2" METHOD=POST ACTION="">
+  cadena:<INPUT TYPE="text" NAME="cad"><BR>
+  base:<INPUT TYPE="text" NAME="base"><BR>
+  numero:<INPUT TYPE="text" NAME="num" disabled><BR>
+  <INPUT TYPE="button" value="Calcular" 
+  onclick="Form2.num.value=parseInt(Form2.cad.value,Form2.base.value)">
+</FORM>
+
+</BODY>
+</HTML>

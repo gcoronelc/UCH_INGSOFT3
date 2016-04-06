@@ -1,0 +1,29 @@
+<HTML>
+	<HEAD>
+	<TITLE>Objeto Location</TITLE> 
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    var i = 1;
+    var idtime
+    var titori = document.title;
+    function showtitle()
+    {
+      document.title = titori.substring(0,i);
+      i++;
+      if (i > titori.length) { i = 0; }
+      idtime = setTimeout("showtitle();",100);
+     }
+     showtitle();
+  //-->
+  </SCRIPT>
+	</HEAD>
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="">
+  Nuevo Titulo: <INPUT TYPE="text" NAME="titulo"><BR>
+  <INPUT TYPE="button" value="Titulo" 
+  onClick="titori=Form1.titulo.value;showtitle()">
+  <INPUT TYPE="button" value="Cancel" onClick="clearTimeout(idtime);">
+
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+</HEAD>
+
+<script language="JavaScript">
+<!--
+
+	function sumar()
+	{
+		Form1.Suma1.value = parseFloat(Form1.cad1.value)+parseFloat(Form1.cad2.value);
+		Form1.Suma2.value = Form1.cad1.value + Form1.cad2.value;
+	}
+
+//-->
+</script>
+
+<BODY>
+	<FORM NAME="Form1" METHOD=POST ACTION="">
+	  cadena1:<INPUT TYPE="text" NAME="cad1"><BR>
+	  cadena2:<INPUT TYPE="text" NAME="cad2"><BR>
+	  Suma1:<INPUT TYPE="text" NAME="Suma1" disabled><BR>
+	  Suma2:<INPUT TYPE="text" NAME="Suma2" disabled><BR>
+
+	  <INPUT TYPE="button" value="Calcular" onclick="sumar();">
+	</FORM>
+</BODY>
+
+</HTML>

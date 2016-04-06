@@ -1,0 +1,17 @@
+EVALUACIÓN PARTE I
+
+- Practica
+- Trabajo: Se entrega  Semana 06
+- Laboratorio: Semana 06
+- Investigación es grupal y exposición es individual: 
+  Analisis de requerimientos de una empresa para la creación de software. 
+  Presentar en digital y exponer.
+  Se utiliza RUP: 
+    - Casos de uso.
+    - Documentación de casos de uso
+    - Diagramas de secuencia.
+    - Diagrama de clases del sistema.
+    - Modelo E-R.
+    - Etc.
+  
+  

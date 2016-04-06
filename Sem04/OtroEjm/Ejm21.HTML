@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+	<TITLE>Introducción a Funciones</TITLE>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function validar()
+    {
+	  Form1.enviar.disabled = false;
+      if (Form1.nombre.value == "") {
+	    Form1.enviar.disabled = true; 
+	  }
+	  if (Form1.email.value.indexOf("@") == -1) {
+	    Form1.enviar.disabled = true;
+	  }
+    }
+  //-->
+  </SCRIPT>
+	</HEAD>
+<BODY>
+<FORM NAME="Form1" METHOD=POST ACTION="alfa.asp">
+  Nombre:<INPUT TYPE="text" NAME="nombre" onChange=validar()><BR>
+  Email:<INPUT TYPE="text" NAME="email" onChange=validar()><BR>
+  <INPUT TYPE="submit" name="enviar" value="Enviar Datos" disabled>
+</FORM>
+</BODY>
+</HTML>
