@@ -1,8 +1,8 @@
 EVALUACIÓN PARTE I
 
 - Practica
-- Trabajo
-- Laboratorio
+- Trabajo: Se entrega  Semana 06
+- Laboratorio: Semana 06
 - Investigación es grupal y exposición es individual: 
   Analisis de requerimientos de una empresa para la creación de software. 
   Presentar en digital y exponer.
