@@ -63,6 +63,7 @@ public class CarritoController extends HttpServlet {
     // forward
     request.setAttribute("lista", carrito.getLista());
     request.setAttribute("total", carrito.getTotal());
+    request.setAttribute("dtoMayor", carrito.getVentaMayorImporte());
     RequestDispatcher rd;
     rd = request.getRequestDispatcher("listado.jsp");
     rd.forward(request, response);

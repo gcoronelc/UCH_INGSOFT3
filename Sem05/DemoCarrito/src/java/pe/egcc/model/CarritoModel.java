@@ -29,4 +29,17 @@ public class CarritoModel {
     return total;
   }
   
+  public ItemDto getVentaMayorImporte(){
+    if(lista.isEmpty()){
+      return null;
+    }
+    ItemDto dto = lista.get(0);
+    for (ItemDto obj : lista) {
+      if(obj.getImporte() > dto.getImporte()){
+        dto = obj;
+      }
+    }
+    return dto;
+  }
+  
 }
