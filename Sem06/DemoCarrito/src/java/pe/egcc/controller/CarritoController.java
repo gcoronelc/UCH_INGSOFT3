@@ -12,7 +12,8 @@ import pe.egcc.dto.ItemDto;
 import pe.egcc.model.CarritoModel;
 
 @WebServlet(name = "CarritoController",
-        urlPatterns = {"/CarritoAgregar", "/CarritoListar", "/CarritoReset"})
+        urlPatterns = {"/CarritoAgregar", "/CarritoListar", 
+          "/CarritoReset", "/SessionReset"})
 public class CarritoController extends HttpServlet {
 
   @Override
@@ -27,6 +28,8 @@ public class CarritoController extends HttpServlet {
       carritoListar(request, response);
     } else if (path.equals("/CarritoReset")) {
       carritoReset(request, response);
+    } else if (path.equals("/SessionReset")) {
+      sessionReset(request, response);
     }
 
   }
@@ -40,6 +43,7 @@ public class CarritoController extends HttpServlet {
     ItemDto dto = new ItemDto(producto, precio, cant, 0);
     HttpSession session = request.getSession();
     if (session.getAttribute("carrito") == null) {
+      System.err.println("EGCC: Carrito desde agregar");
       session.setAttribute("carrito", new CarritoModel());
     }
     CarritoModel carrito;
@@ -56,6 +60,7 @@ public class CarritoController extends HttpServlet {
     // Acceso al carrito
     HttpSession session = request.getSession();
     if (session.getAttribute("carrito") == null) {
+       System.err.println("EGCC: Carrito desde listar");
       session.setAttribute("carrito", new CarritoModel());
     }
     CarritoModel carrito;
@@ -63,7 +68,6 @@ public class CarritoController extends HttpServlet {
     // forward
     request.setAttribute("lista", carrito.getLista());
     request.setAttribute("total", carrito.getTotal());
-    request.setAttribute("dtoMayor", carrito.getVentaMayorImporte());
     RequestDispatcher rd;
     rd = request.getRequestDispatcher("listado.jsp");
     rd.forward(request, response);
@@ -71,6 +75,7 @@ public class CarritoController extends HttpServlet {
 
   private void carritoReset(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // Acceso al carrito
+     System.err.println("EGCC: Carrito desde reset");
     HttpSession session = request.getSession();
     session.setAttribute("carrito", new CarritoModel());
     CarritoModel carrito;
@@ -78,6 +83,15 @@ public class CarritoController extends HttpServlet {
     // forward
     request.setAttribute("lista", carrito.getLista());
     request.setAttribute("total", carrito.getTotal());
+    RequestDispatcher rd;
+    rd = request.getRequestDispatcher("listado.jsp");
+    rd.forward(request, response);
+  }
+
+  private void sessionReset(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Limpiar session
+    request.getSession().invalidate();
+    // forward
     RequestDispatcher rd;
     rd = request.getRequestDispatcher("listado.jsp");
     rd.forward(request, response);

@@ -27,10 +27,5 @@
       </c:forEach>
       
     </table>
-    <h2>VENTA DE MAYOR IMPORTE</h2>
-    <p>Producto: ${dtoMayor.producto}</p>
-    <p>Precio ${dtoMayor.precio}</p>
-    <p>Cantidad: ${dtoMayor.cant}</p>
-    <p>Importe: ${dtoMayor.importe}</p>
   </body>
 </html>
