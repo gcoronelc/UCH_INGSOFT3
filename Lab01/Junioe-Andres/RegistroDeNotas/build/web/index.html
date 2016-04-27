@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            nav{text-align: center;}
+            a{text-decoration: none; font-size: 2em; color: black;}
+            
+            h1{text-align: center;}
+            .menu{list-style:none; padding:0px; margin:0px;}
+            .menu li{margin:0px 9%; padding:0px; float:left;}
+            .menu li a{display :inline-block; text-decoration:none; text-align:center; padding: 5px 50px; color:#FFF;background-color:#C80042;}
+            .menu li a:hover{color:#FFF; background-color: #ff1663;}
+            nav ul{align-content: center;}
+            h1{color: #FFF;}
+            iframe{ min-height: 400px; min-width: 900px;}
+        </style>
+    </head>
+    <body>
+        <div style="margin:20px;">
+            <div style="padding:10px; height: 145px; border:1px solid #BBB;border-top-left-radius: 1em 1em; border-top-right-radius: 1em 1em;background-color:#C80042;">
+                <h1>Registro de Notas - (Giusseppi Junior Andres Vega)</h1><br>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="agregar.jsp" target="WORK" >Agregar</a></li>
+                        <li><a href="ListarNotas" target="WORK">Notas</a></li>
+                        <li><a href="EstadisticaNota" target="WORK">Estadistica</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div style="padding:10px;border-top:0px; border-left:1px; border-right:1px; border-bottom:1px; border-style:solid; border-color:#BBB;border-bottom-right-radius: 1em 1em; border-bottom-left-radius: 1em 1em;">
+                <nav>
+                    <iframe name="WORK" frameborder="0" ></iframe>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
