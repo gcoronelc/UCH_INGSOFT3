@@ -1,0 +1,2 @@
+- Control del libro: Arquitectura Java Solida
+- Practica Calificada
