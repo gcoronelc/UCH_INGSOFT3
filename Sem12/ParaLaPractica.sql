@@ -62,6 +62,18 @@ group by cu.chr_cuencodigo, me.vch_monedescripcion;
 
 
 
+-- PARA EL COMBO DE LAS SUCURSALES
+
+SELECT 
+	chr_sucucodigo codigo,
+	vch_sucunombre nombre
+FROM sucursal
+WHERE chr_sucucodigo IN (
+SELECT distinct chr_sucucodigo FROM cuenta);
+
+
+
+
 
 
 
