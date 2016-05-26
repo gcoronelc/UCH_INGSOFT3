@@ -37,3 +37,7 @@ join movimiento mv on cu.chr_cuencodigo = mv.chr_cuencodigo
 join tipomovimiento tm on mv.chr_tipocodigo = tm.chr_tipocodigo
 group by me.vch_monedescripcion;
 
+
+
+
+
