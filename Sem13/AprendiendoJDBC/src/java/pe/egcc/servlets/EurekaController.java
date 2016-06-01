@@ -13,7 +13,8 @@ import pe.egcc.domain.Cliente;
 import pe.egcc.domain.Empleado;
 import pe.egcc.service.EurekaService;
 
-@WebServlet({"/AddParametro", "/ClienteConsultar","/Logon"})
+@WebServlet({"/AddParametro", "/ClienteConsultar",
+  "/Logon","/CuentaDeposito"})
 public class EurekaController extends HttpServlet {
 
   private EurekaService es;
@@ -32,6 +33,8 @@ public class EurekaController extends HttpServlet {
       clienteConsultar(request, response);
     } else if (path.equals("/Logon")) {
       logon(request, response);
+    } else if (path.equals("/CuentaDeposito")) {
+      cuentaDeposito(request, response);
     }
 
   }
@@ -100,6 +103,32 @@ public class EurekaController extends HttpServlet {
     // Forward
     RequestDispatcher rd;
     rd = request.getRequestDispatcher(destino);
+    rd.forward(request, response);
+  }
+
+  private void cuentaDeposito(HttpServletRequest request, 
+          HttpServletResponse response) 
+          throws ServletException, IOException {
+    String cuenta = "";
+    double importe = 0.0;
+    try {
+      // Datos
+      cuenta = request.getParameter("cuenta");
+      importe = Double.parseDouble(request.getParameter("importe"));
+      // Empleado
+      HttpSession session = request.getSession();
+      Empleado bean = (Empleado) session.getAttribute("usuario");
+      // Proceso
+      es.procDeposito(cuenta, importe, bean.getCodigo());
+      // Final
+      request.setAttribute("mensaje", "Proceso ejecutado correctamente.");
+    } catch (Exception e) {
+      request.setAttribute("error", e.getMessage());
+      request.setAttribute("cuenta", cuenta);
+      request.setAttribute("importe", importe);
+    }
+    // Forward
+    RequestDispatcher rd = request.getRequestDispatcher("demo003.jsp");
     rd.forward(request, response);
   }
 

@@ -126,7 +126,7 @@ public class EurekaDao {
 
   public void procDeposito(String cuenta, double importe, String codEmp) {
     String SQL_SELECT = "select dec_cuensaldo saldo, int_cuencontmov cont "
-            + "from cuenta where chr_cuencodigo = ?";
+            + "from cuenta where chr_cuencodigo = ? for update ";
     String SQL_UPDATE = "update cuenta set dec_cuensaldo=?, "
             + "int_cuencontmov=? where chr_cuencodigo = ?";
     String SQL_INSERT = "insert into movimiento(chr_cuencodigo,int_movinumero, "

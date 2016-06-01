@@ -6,5 +6,6 @@
 <p>
   <a href="demo001.jsp">Demo 001</a>&nbsp;&nbsp;
   <a href="demo002.jsp">Demo 002</a>&nbsp;&nbsp;
+  <a href="demo003.jsp">Demo 003</a>&nbsp;&nbsp;
 </p>
 <hr/>

@@ -26,4 +26,8 @@ public class EurekaService {
    public Empleado validar(String usuario, String clave) {
      return dao.validar(usuario, clave);
    }
+   
+    public void procDeposito(String cuenta, double importe, String codEmp) {
+      dao.procDeposito(cuenta, importe, codEmp);
+    }
 }
