@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/EGCC/UCH_INGSOFT3_001/Sem14/CombosAnidados/src/java/pe/egcc/demo/servlets/DemoController.java</file>
+            <file>file:/C:/EGCC/UCH_INGSOFT3_001/Sem14/CombosAnidados/src/java/pe/egcc/demo/database/AccesoDB.java</file>
+            <file>file:/C:/EGCC/UCH_INGSOFT3_001/Sem14/CombosAnidados/src/java/pe/egcc/demo/servlets/SessionListener.java</file>
+            <file>file:/C:/EGCC/UCH_INGSOFT3_001/Sem14/CombosAnidados/web/WEB-INF/web.xml</file>
+        </group>
     </open-files>
 </project-private>
