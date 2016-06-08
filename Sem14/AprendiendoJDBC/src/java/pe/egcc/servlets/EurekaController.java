@@ -114,6 +114,7 @@ public class EurekaController extends HttpServlet {
           throws ServletException, IOException {
     String cuenta = "";
     double importe = 0.0;
+    BeanRpta beanRpta = new BeanRpta();
     try {
       // Datos
       cuenta = request.getParameter("cuenta");
@@ -124,15 +125,14 @@ public class EurekaController extends HttpServlet {
       // Proceso
       es.procDeposito(cuenta, importe, bean.getCodigo());
       // Final
-      request.setAttribute("mensaje", "Proceso ejecutado correctamente.");
+      beanRpta.setCode(1);
+      beanRpta.setTexto("Proceso ejecutado correctamente.");
     } catch (Exception e) {
-      request.setAttribute("error", e.getMessage());
-      request.setAttribute("cuenta", cuenta);
-      request.setAttribute("importe", importe);
+      beanRpta.setCode(-1);
+      beanRpta.setTexto(e.getMessage());
     }
-    // Forward
-    RequestDispatcher rd = request.getRequestDispatcher("demo003.jsp");
-    rd.forward(request, response);
+    // Response JSON
+    enviarJson(response, beanRpta);
   }
 
   private void enviarJson(HttpServletResponse response, BeanRpta bean) throws IOException {

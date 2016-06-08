@@ -1,36 +1,45 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="jquery/jquery-2.2.4.min.js"></script>
     <title>JSP Page</title>
   </head>
   <body>
     <jsp:include page="cabecera.jsp" />
     <h1>REGISTRAR DEPOSITO</h1>
     
-    <c:if test="${error != null}">
-      <p style="color:red;">${error}</p>
-    </c:if>
+    <div id="divMsg">Aqui se mostrara el mensaje</div>
     
-    <form method="post" action="CuentaDeposito">
+    <form id="form1">
       <table>
         <tr>
           <td>Cuenta</td>
-          <td><input type="text" name="cuenta" value="${cuenta}"/></td>
+          <td><input type="text" name="cuenta"/></td>
           <td></td>
         </tr>
         <tr>
           <td>Importe</td>
-          <td><input type="text" name="importe" value="${importe}"/></td>
-          <td><input type="submit" value="Procesar" /></td>
+          <td><input type="text" name="importe"/></td>
+          <td><input type="button" id="btnProcesar" value="Procesar" /></td>
         </tr>
       </table>
     </form>
     
-    <c:if test="${mensaje != null}">
-      <p style="color:blue;">${mensaje}</p>
-    </c:if>
+    <script type="text/javascript">
+      $("#btnProcesar").click(function(){
+        var data = $("#form1").serialize();
+        $.post("CuentaDeposito",data,function(obj){
+          var textHTML = "";
+          if(obj.code === 1){
+            textHTML = "<p style='color:blue;'>" + obj.texto + "</p>";
+          } else {
+            textHTML = "<p style='color:red;'>" + obj.texto + "</p>";
+          }
+          $("#divMsg").html(textHTML);
+        });
+      });
+    </script>
   </body>
 </html>
