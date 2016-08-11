@@ -7,7 +7,6 @@
 - Inicio: 09-MAR-2016
 - Página: http://gcoronelc.github.io/UCH_ING_SOFT_III_2016_1/
 
-
 # DOCENTE
 
 - Docente: Eric Gustavo Coronel Castillo
