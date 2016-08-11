@@ -1,5 +1,6 @@
 ![INGENIERIA DE SOFTWARE III](https://raw.githubusercontent.com/gcoronelc/UCH_ING_SOFT_III_2016_1/master/UCH_ING_SOFT_III_2016_1.png)
 
+
 # INGENIERIA DE SOFTWARE III
 
 - Lugar: UNIVERSIDAD DE CIENCIAS Y HUMANIDADES
@@ -7,11 +8,13 @@
 - Inicio: 09-MAR-2016
 - Página: http://gcoronelc.github.io/UCH_ING_SOFT_III_2016_1/
 
+
 # DOCENTE
 
 - Docente: Eric Gustavo Coronel Castillo
 - Blog: www.desarrollasoftware.com
 - Correo: gcoronelc@gmail.com
+
 
 # RECURSOS RECOMENDADOS
 
