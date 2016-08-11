@@ -1,11 +1,11 @@
-![INGENIERIA DE SOFTWARE III](https://raw.githubusercontent.com/gcoronelc/UCH_INGSOFT3_001/master/logo.png)
+![INGENIERIA DE SOFTWARE III](https://raw.githubusercontent.com/gcoronelc/UCH_ING_SOFT_III_2016_1/master/UCH_ING_SOFT_III_2016_1.png)
 
 # INGENIERIA DE SOFTWARE III
 
 - Lugar: UNIVERSIDAD DE CIENCIAS Y HUMANIDADES
 - Horario: MIERCOLES DE 6:00 pm a 10:30 pm
 - Inicio: 09-MAR-2016
-- Página: http://gcoronelc.github.io/UCH_INGSOFT3_001/
+- Página: http://gcoronelc.github.io/UCH_ING_SOFT_III_2016_1/
 
 
 # DOCENTE
